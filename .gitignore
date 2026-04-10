@@ -17,3 +17,6 @@
 
 # Optional local config
 .env
+
+# calctl binary
+calctl
