@@ -1,6 +1,8 @@
-# apple-calendar-ctl
+# apple-calendar-ctl (`calctl`)
 
-Native macOS CLI for Apple Calendar via EventKit. Inspired by [steipete/remindctl](https://github.com/steipete/remindctl).
+Native macOS CLI for Apple Calendar via EventKit.
+
+> **Inspiration & props:** This project is directly inspired by [steipete/remindctl](https://github.com/steipete/remindctl) — a great native CLI for Apple Reminders. `calctl` follows the same spirit for Apple Calendar: fast, scriptable, and no AppleScript/osascript.
 
 ## Build
 
@@ -86,6 +88,11 @@ Builds, runs `--help`, `status`, `list`, and `today`. Non-destructive. Exit 0 = 
 - Swift 6.0+ / macOS 14+
 - EventKit (native, no AppleScript)
 - Swift Package Manager
+
+## Acknowledgements
+
+- Huge credit to **[Peter Steinberger (@steipete)](https://github.com/steipete)** for [remindctl](https://github.com/steipete/remindctl).
+- `calctl` exists because remindctl proved how effective native EventKit-based tooling can be for Apple productivity workflows.
 
 ---
 
