@@ -2,15 +2,13 @@
 import PackageDescription
 
 let package = Package(
-  name: "calendarctl",
+  name: "calctl",
   platforms: [.macOS(.v14)],
   products: [
     .library(name: "CalendarCore", targets: ["CalendarCore"]),
-    .executable(name: "calendarctl", targets: ["calendarctl"]),
+    .executable(name: "calctl", targets: ["calctl"]),
   ],
-  dependencies: [
-    .package(url: "https://github.com/steipete/Commander.git", from: "0.2.0"),
-  ],
+  dependencies: [],
   targets: [
     .target(
       name: "CalendarCore",
@@ -20,10 +18,9 @@ let package = Package(
       ]
     ),
     .executableTarget(
-      name: "calendarctl",
+      name: "calctl",
       dependencies: [
         "CalendarCore",
-        .product(name: "Commander", package: "Commander"),
       ],
       exclude: [
         "Resources/Info.plist",
@@ -33,7 +30,7 @@ let package = Package(
           "-Xlinker", "-sectcreate",
           "-Xlinker", "__TEXT",
           "-Xlinker", "__info_plist",
-          "-Xlinker", "Sources/calendarctl/Resources/Info.plist",
+          "-Xlinker", "Sources/calctl/Resources/Info.plist",
         ]),
       ]
     ),

@@ -71,7 +71,7 @@ CalendarCore has ZERO dependencies — just EventKit + Foundation.
 ```swift
 targets: [
   .target(name: "CalendarCore", linkerSettings: [.linkedFramework("EventKit")]),
-  .executableTarget(name: "calendarctl", dependencies: ["CalendarCore", .product(name: "Commander", ...)])
+  .executableTarget(name: "calctl", dependencies: ["CalendarCore", .product(name: "Commander", ...)])
 ]
 ```
 

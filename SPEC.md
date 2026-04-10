@@ -21,7 +21,7 @@
 Check calendar authorization status. No calendar access required.
 
 ```
-calendarctl status
+calctl status
 ```
 
 **Output:** One of:
@@ -39,7 +39,7 @@ calendarctl status
 Trigger the macOS calendar access prompt.
 
 ```
-calendarctl authorize
+calctl authorize
 ```
 
 **Exit codes:** 0 = granted, 1 = denied or error.
@@ -51,7 +51,7 @@ calendarctl authorize
 List all calendars.
 
 ```
-calendarctl list [--json]
+calctl list [--json]
 ```
 
 ---
@@ -61,7 +61,7 @@ calendarctl list [--json]
 Show all events for today.
 
 ```
-calendarctl today [--calendar <name>] [--json] [--plain] [--quiet]
+calctl today [--calendar <name>] [--json] [--plain] [--quiet]
 ```
 
 ---
@@ -71,7 +71,7 @@ calendarctl today [--calendar <name>] [--json] [--plain] [--quiet]
 Show all events for tomorrow.
 
 ```
-calendarctl tomorrow [--calendar <name>] [--json] [--plain] [--quiet]
+calctl tomorrow [--calendar <name>] [--json] [--plain] [--quiet]
 ```
 
 ---
@@ -81,7 +81,7 @@ calendarctl tomorrow [--calendar <name>] [--json] [--plain] [--quiet]
 Show all events for the current week (Monday–Sunday).
 
 ```
-calendarctl week [--calendar <name>] [--json] [--plain] [--quiet]
+calctl week [--calendar <name>] [--json] [--plain] [--quiet]
 ```
 
 ---
@@ -91,12 +91,12 @@ calendarctl week [--calendar <name>] [--json] [--plain] [--quiet]
 Show events for a specific date.
 
 ```
-calendarctl date <YYYY-MM-DD> [--calendar <name>] [--json]
+calctl date <YYYY-MM-DD> [--calendar <name>] [--json]
 ```
 
 **Example:**
 ```bash
-calendarctl date 2026-04-15 --calendar "Work"
+calctl date 2026-04-15 --calendar "Work"
 ```
 
 ---
@@ -106,7 +106,7 @@ calendarctl date 2026-04-15 --calendar "Work"
 Create a new calendar event.
 
 ```
-calendarctl add --title <text> --start <"YYYY-MM-DD HH:mm"> --end <"YYYY-MM-DD HH:mm">
+calctl add --title <text> --start <"YYYY-MM-DD HH:mm"> --end <"YYYY-MM-DD HH:mm">
                    [--calendar <name>] [--all-day] [--notes <text>] [--location <text>]
 ```
 
@@ -128,10 +128,10 @@ calendarctl add --title <text> --start <"YYYY-MM-DD HH:mm"> --end <"YYYY-MM-DD H
 **Examples:**
 ```bash
 # Timed event
-calendarctl add --title "Standup" --start "2026-04-11 09:00" --end "2026-04-11 09:30"
+calctl add --title "Standup" --start "2026-04-11 09:00" --end "2026-04-11 09:30"
 
 # All-day event
-calendarctl add --title "Conference Day" --start "2026-05-15" --end "2026-05-15" --all-day
+calctl add --title "Conference Day" --start "2026-05-15" --end "2026-05-15" --all-day
 ```
 
 **Output:** `Created: <title> (<event-id>)`
@@ -143,7 +143,7 @@ calendarctl add --title "Conference Day" --start "2026-05-15" --end "2026-05-15"
 Update an existing event.
 
 ```
-calendarctl edit --id <event-id> [--title <text>] [--start <"YYYY-MM-DD HH:mm">]
+calctl edit --id <event-id> [--title <text>] [--start <"YYYY-MM-DD HH:mm">]
                  [--end <"YYYY-MM-DD HH:mm">] [--calendar <name>]
                  [--notes <text>] [--location <text>]
 ```
@@ -154,7 +154,7 @@ calendarctl edit --id <event-id> [--title <text>] [--start <"YYYY-MM-DD HH:mm">]
 
 **Example:**
 ```bash
-calendarctl edit --id ABC123XYZ --title "Updated Title" --start "2026-04-11 10:00"
+calctl edit --id ABC123XYZ --title "Updated Title" --start "2026-04-11 10:00"
 ```
 
 **Output:** `Updated: <title> (<event-id>)`
@@ -166,7 +166,7 @@ calendarctl edit --id ABC123XYZ --title "Updated Title" --start "2026-04-11 10:0
 Delete an event.
 
 ```
-calendarctl delete --id <event-id> [--force]
+calctl delete --id <event-id> [--force]
 ```
 
 | Flag | Description |
@@ -178,7 +178,7 @@ Without `--force`, prompts: `Delete event <id>? [y/N]`
 
 **Example:**
 ```bash
-calendarctl delete --id ABC123XYZ --force
+calctl delete --id ABC123XYZ --force
 ```
 
 ---

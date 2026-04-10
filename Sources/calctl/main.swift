@@ -95,7 +95,7 @@ struct StatusCommand: Command {
         let status = CalendarEventsStore.authorizationStatus()
         switch status {
         case .fullAccess: print("authorized")
-        case .notDetermined: print("notDetermined - run 'calendarctl authorize' to request access")
+        case .notDetermined: print("notDetermined - run 'calctl authorize' to request access")
         case .denied, .restricted: print("denied - grant Terminal access in System Settings > Privacy & Security > Calendars")
         case .writeOnly: print("writeOnly - grant Full Access in System Settings > Privacy & Security > Calendars")
         }
@@ -178,7 +178,7 @@ struct DateCmd: Command {
     let name = "date"
     func run(args: Args) async throws {
         guard let dateStr = args.positional.first ?? args.string("date") else {
-            print("Usage: calendarctl date <YYYY-MM-DD> [--calendar <name>] [--calendar-id <id>] [--json]")
+            print("Usage: calctl date <YYYY-MM-DD> [--calendar <name>] [--calendar-id <id>] [--json]")
             return
         }
         let start = try DateParser.parseDate(dateStr)
@@ -274,7 +274,7 @@ struct HelpCmd: Command {
 apple-calendar-ctl - Apple Calendar CLI
 
 USAGE
-  calendarctl <command> [options]
+  calctl <command> [options]
 
 COMMANDS
   status        Check authorization status
@@ -297,11 +297,11 @@ GLOBAL OPTIONS
   --calendar-id <id>     Filter by calendar id (preferred when names duplicate)
 
 EXAMPLES
-  calendarctl list
-  calendarctl today
-  calendarctl date 2026-05-01 --calendar "Work"
-  calendarctl add --title "Standup" --start "2026-04-11 09:00" --end "2026-04-11 09:30"
-  calendarctl delete --id <event-id> --force
+  calctl list
+  calctl today
+  calctl date 2026-05-01 --calendar "Work"
+  calctl add --title "Standup" --start "2026-04-11 09:00" --end "2026-04-11 09:30"
+  calctl delete --id <event-id> --force
 """)
     }
 }
@@ -347,7 +347,7 @@ func showHelp() {
 apple-calendar-ctl - Apple Calendar CLI
 
 USAGE
-  calendarctl <command> [options]
+  calctl <command> [options]
 
 COMMANDS
   status        Check authorization status
@@ -362,7 +362,7 @@ COMMANDS
   delete        Remove an event
   help          Show detailed help
 
-Run 'calendarctl help' for full usage.
+Run 'calctl help' for full usage.
 """)
 }
 
@@ -380,7 +380,7 @@ if commandName == "help" || commandName == "--help" || commandName == "-h" {
 
 guard let command = commands.first(where: { $0.name == commandName }) else {
     print("Unknown command: \(commandName)")
-    print("Run 'calendarctl help' for usage.")
+    print("Run 'calctl help' for usage.")
     exit(1)
 }
 

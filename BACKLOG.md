@@ -2,7 +2,7 @@
 
 ## 🔴 High Priority (MVP)
 
-### calendarctl list
+### calctl list
 **Why:** First command users expect — see which calendars exist.
 
 **Items:**
@@ -12,7 +12,7 @@
 **GitHub Issue:** TBD
 **Status:** in-progress
 
-### calendarctl today / tomorrow / week / \<date\>
+### calctl today / tomorrow / week / \<date\>
 **Why:** Core query interface — mirror remindctl's query style exactly.
 
 **Items:**
@@ -26,7 +26,7 @@
 **GitHub Issue:** TBD
 **Status:** in-progress
 
-### calendarctl add
+### calctl add
 **Why:** Create events — the main write operation.
 
 **Items:**
@@ -42,7 +42,7 @@
 **GitHub Issue:** TBD
 **Status:** in-progress
 
-### calendarctl edit
+### calctl edit
 **Why:** Update existing events.
 
 **Items:**
@@ -53,7 +53,7 @@
 **GitHub Issue:** TBD
 **Status:** in-progress
 
-### calendarctl delete
+### calctl delete
 **Why:** Remove events.
 
 **Items:**
@@ -90,7 +90,7 @@
 **GitHub Issue:** TBD
 **Status:** backlog
 
-### calendarctl move
+### calctl move
 **Why:** Move event to different calendar or reschedule.
 
 **Items:**
@@ -100,11 +100,11 @@
 **GitHub Issue:** TBD
 **Status:** backlog
 
-### calendarctl find / search
+### calctl find / search
 **Why:** Search across all calendars for keyword.
 
 **Items:**
-- [ ] `calendarctl find "meeting"`
+- [ ] `calctl find "meeting"`
 - [ ] `--calendar <name>` scope filter
 
 **GitHub Issue:** TBD
@@ -114,7 +114,7 @@
 **Why:** Distribution — one-command install like remindctl.
 
 **Items:**
-- [ ] Create `Formula/calendarctl.rb` for steipete/homebrew-tap
+- [ ] Create `Formula/calctl.rb` for steipete/homebrew-tap
 - [ ] Add to README install instructions
 
 **GitHub Issue:** TBD

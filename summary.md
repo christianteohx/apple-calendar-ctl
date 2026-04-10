@@ -11,7 +11,7 @@ status: #active
 **Context:** Building a native macOS Swift CLI for Apple Calendar — similar to `remindctl` but for calendar events via EventKit
 
 ## What This Is
-A Swift CLI tool (`calendarctl`) that provides a command-line interface to Apple Calendar using native EventKit APIs — no AppleScript, no osascript. Inspired directly by [steipete/remindctl](https://github.com/steipete/remindctl).
+A Swift CLI tool (`calctl`) that provides a command-line interface to Apple Calendar using native EventKit APIs — no AppleScript, no osascript. Inspired directly by [steipete/remindctl](https://github.com/steipete/remindctl).
 
 ## Why
 User wants to migrate schedule tracking from Obsidian tasks.md → Apple Calendar + Reminders. `remindctl` handles Reminders; no equivalent exists for Calendar events.
@@ -29,12 +29,12 @@ apple-calendar-ctl/
 ├── workflow.md         ← project-specific workflow
 ├── BACKLOG.md          ← feature backlog
 ├── Sources/
-│   └── calendarctl/
+│   └── calctl/
 │       ├── CalendarCore/      ← EventKit store (CalendarEventsStore)
 │       │   ├── CalendarEventsStore.swift
 │       │   ├── Models.swift
 │       │   └── Errors.swift
-│       └── calendarctl/       ← CLI entry point + commands
+│       └── calctl/       ← CLI entry point + commands
 │           ├── main.swift
 │           ├── Commands/
 │           ├── OutputFormatting.swift
