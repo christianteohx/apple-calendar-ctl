@@ -1,0 +1,19 @@
+# Build artifacts
+.build/
+
+# Xcode
+*.xcodeproj/
+
+# macOS
+.DS_Store
+
+# Swift Package Manager
+# (Package.resolved is intentionally committed for reproducible builds)
+
+# Editor
+*.swp
+*.swo
+*~
+
+# Optional local config
+.env
