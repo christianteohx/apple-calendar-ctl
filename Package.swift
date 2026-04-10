@@ -3,7 +3,7 @@ import PackageDescription
 
 let package = Package(
   name: "calctl",
-  platforms: [.macOS(.v13)],
+  platforms: [.macOS(.v14)],
   products: [
     .library(name: "CalendarCore", targets: ["CalendarCore"]),
     .executable(name: "calctl", targets: ["calctl"]),
